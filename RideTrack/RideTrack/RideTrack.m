@@ -19,6 +19,7 @@
 @property (nonatomic, strong) RTMotionManager *motionManager;
 
 @property (nonatomic, strong) RTTripTrack *currentTripTrack;
+@property (nonatomic, strong) NSMutableArray *tripTracks;
 
 @end
 
@@ -92,6 +93,7 @@
     self.currentTripTrack.stopDate = [NSDate date];
     self.currentTripTrack.destinationLocation = self.locationManager.currentLocation;
     [self.tripTracks addObject:self.currentTripTrack];
+    [self.delegate didCompleteTripTrack:self.currentTripTrack];
     self.currentTripTrack = nil;
 }
 

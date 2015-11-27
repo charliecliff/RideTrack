@@ -8,7 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class RTTripTrack;
+
+@protocol RideTrackDelegate <NSObject>
+
+@optional
+- (void)didCompleteTripTrack:(RTTripTrack *)tripTrack;
+
+@end
+
 @interface RideTrack : NSObject
+
+@property (nonatomic, weak) id<RideTrackDelegate>delegate;
 
 @property (nonatomic, strong, readonly) NSMutableArray *tripTracks;
 
