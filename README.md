@@ -1,6 +1,6 @@
 # RideTrack
 
-RideTrack is a Framework to generate RTTripTrakc data, which encapsulate a user's transit usage.
+RideTrack is a Framework to generate RTTripTrack data, which encapsulate a user's transit usage.
 
 ## Installation
 
